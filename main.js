@@ -17,7 +17,7 @@ if(environmentArgument === 'production' || environmentArgument === 'development'
     if (err) throw new Error('error setting environment: fatal')
   });
 }else{
-  throw new Error('argument must be either: production | development')
+  throw new Error('the environment argument must be supplied: production | development')
 }
 
 function createWindow () {
