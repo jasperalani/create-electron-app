@@ -9,8 +9,8 @@ if(environmentArgument === 'production' || environmentArgument === 'development'
   // Set environment
   const js = `
   /*** AUTO GENERATED ENVIRONMENT FILE DO NOT EDIT ***/
-  const ENV = module.exports.ENV = '` + environmentArgument + `';
-  const CREATION_DATETIME = module.exports.CREATION_DATETIME = '` + new Date() + `';
+  module.exports.ENV = '` + environmentArgument + `';
+  module.exports.CREATION_DATETIME = '` + new Date() + `';
   /*** VARIABLES MUST BE ACCESSED USING ES6 MODULE SYNTAX ***/
   `
   fs.writeFile('env.js', js, function (err) {
